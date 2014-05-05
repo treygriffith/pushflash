@@ -1,5 +1,5 @@
 {
-  "name": "pubsub-client",
+  "name": "pushflash-client",
   "version": "0.0.1",
   "description": "PubSub client script",
   "main": "index.js",
@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "pubsub",
+    "notification",
+    "notify",
+    "humane",
+    "push",
+    "publish",
+    "flash",
     "client",
     "browser"
   ],

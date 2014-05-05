@@ -1,14 +1,17 @@
 {
-  "name": "pubsub",
+  "name": "pushflash",
   "version": "0.0.1",
-  "description": "Full featured PubSub for web applications",
+  "description": "Notify web app users about background tasks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "notification",
-    "pubsub",
+    "flash",
+    "push",
+    "notify",
+    "notification",
     "publish",
     "subscribe",
     "socket.io",
