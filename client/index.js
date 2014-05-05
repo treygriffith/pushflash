@@ -15,11 +15,11 @@ module.exports = Subscriber;
 /**
  * Create a new Subscriber instance
  * @param {String} channel   Channel id to subscribe to
- * @param {String} namespace Path to listen for notifications on. Defaults to `notifications`.
  * @param {Object} opts      Options for Subscriber instance
  *   @property {String} baseClass humane.js `baseCls`
+ *   @proptery {String} namespace Path to listen for notifications on. Defaults to `notifications`.
  */
-function Subscriber(channel, namespace, opts) {
+function Subscriber(channel, opts) {
   if(!(this instanceof Subscriber)) {
     return new Subscriber(namespace, channel);
   }
@@ -34,7 +34,7 @@ function Subscriber(channel, namespace, opts) {
   Emitter.call(this);
 
   this.channel = channel;
-  this.namespace = namespace || 'notifications';
+  this.namespace = opts.namespace || 'notifications';
 
   this.io = io.connect('/' + namespace);
 
@@ -54,7 +54,6 @@ function Subscriber(channel, namespace, opts) {
   this.addMessageType('unauthorized', 'error');
   this.addMessageType('info');
   this.addMessageType('success');
-  this.addMessageType('warning');
 }
 
 /**
@@ -73,6 +72,8 @@ Subscriber.prototype.addMessageType = function (type, additionalClass) {
   });
 
   this.on(type, this[type]);
+
+  return this;
 };
 
 /**
