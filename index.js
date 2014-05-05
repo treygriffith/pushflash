@@ -1,5 +1,5 @@
-var Publisher = require('./publisher');
-var Manager = require('./manager');
+var Publisher = require('./lib/publisher');
+var Manager = require('./lib/manager');
 
 module.exports = Manager;
 
