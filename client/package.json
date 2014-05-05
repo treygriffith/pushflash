@@ -1,0 +1,21 @@
+{
+  "name": "pubsub-client",
+  "version": "0.0.1",
+  "description": "PubSub client script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pubsub",
+    "client",
+    "browser"
+  ],
+  "author": "Trey Griffith",
+  "license": "MIT",
+  "dependencies": {
+    "es5-shim": "^3.0.2",
+    "humane-js": "^3.1.0",
+    "socket.io-client": "^0.9.16"
+  }
+}
