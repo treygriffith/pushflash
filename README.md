@@ -55,6 +55,8 @@ The `options` available are:
 * `namespace` The Socket.io namespace for passing notifications. Defaults to `/notifications`
 * `client.name` The name that gets exposed on `window` for the client-side script. Defaults to `Pushflash`
 * `client.path` The path where the client-side script can be retrieved. Defaults to `/pushflash.js`
+* `css.theme` The CSS theme from humane.js you'll be using. Defaults to `jackedup`
+* `css.path` The path where the client-side css can be retrieved. Defaults to `/pushflash.css`
 * `authorize` Function called when a client connects to Pushflash with the Socket.io handshake data and a callback. Callback with `(null, true)` if the client is authorized.
 * `authorizeChannel` Function called when a client connects to Pushflash with the Socket.io handshake data, the channel id, and a callback. Callback with `(null, true)` if the client is authorized.
 * `redis.port` Port number of the redis server. Defaults to `6379`.
@@ -88,9 +90,11 @@ publisher.send('info', "some info");
 
 ### Client-side
 
-To use the client-side script, just define a script with the `src` tag set to the `client.path` defined in the Application Server options, which defaults to `/pushflash.js`.
+To use the client-side script, just define a script with the `src` tag set to the `client.path` defined in the Application Server options, which defaults to `/pushflash.js`. Also add a stylesheet to use the styles for humane.js.
 
-```javascript
+```html
+<link rel="stylesheet" href="/pushflash.css">
+
 <script src="/pushflash.js"></script>
 ```
 
@@ -105,7 +109,7 @@ Pushflash(channel, opts);
 The `options` available are:
 
 * `namespace` The Socket.io namespace for passing notifications. Defaults to `/notifications`
-* `baseClass` The humane.js baseClass to use for styling notifications. Defaults to `humane-flatty`.
+* `baseClass` The humane.js baseClass to use for styling notifications. Defaults to `humane-jackedup`.
 
 ### Message Types
 
