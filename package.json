@@ -1,6 +1,6 @@
 {
   "name": "pushflash",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Notify web app users about background tasks",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "socket.io": "^0.9.16",
     "redis-pubsub": "0.0.4",
     "browserify": "^3.46.0",
-    "pushflash-client": "treygriffith/pushflash-client",
+    "pushflash-client": "^0.1.2",
     "debug": "^0.8.1"
   }
 }
