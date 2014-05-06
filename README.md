@@ -1,7 +1,7 @@
 Pushflash
 =========
 
-Uses Redis, Socket.io, and Humane.js to make it easy to notify any user of your web app of something that happened.
+Uses [Redis](http://redis.io), [Socket.io](http://socket.io), and [Humane.js](http://wavded.github.io/humane-js/) to make it easy to notify any user of your web app of something that happened.
 
 Server:
 
@@ -14,6 +14,7 @@ pushflash(app, server);
 Client:
 
 ```html
+<link rel="stylesheet" href="/pushflash.css">
 <script src="/pushflash.js"></script>
 <script>
   Pushflash('my_user_id'); // new messages on this channel will appear automatically
