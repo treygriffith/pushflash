@@ -1,14 +1,14 @@
 Pushflash
 =========
 
-Uses Redis, Socket.io, and Humane.js to make it easy to notify any user of your express app of something that happened.
+Uses Redis, Socket.io, and Humane.js to make it easy to notify any user of your web app of something that happened.
 
 Server:
 
 ```javascript
 var pushflash = require('pushflash');
 
-pushflash(app);
+pushflash(app, server);
 ```
 
 Client:
@@ -41,10 +41,13 @@ Usage
 
 #### Express Application Server
 
-For the Application server, you simply call the exported function on your Express application, with any options you want.
+For the Application server, you simply call the exported function on your Express application, your HTTP/S server, and with any options you want.
 
 ```javascript
-pushflash(app, options);
+var app = express();
+var server = http.createServer(app);
+
+pushflash(app, server, options);
 ```
 
 The `options` available are:
